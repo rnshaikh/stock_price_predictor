@@ -103,7 +103,7 @@ trainScore = mean_squared_error(X_train, y_train)
 print('Train Score: %.4f MSE (%.4f RMSE)' % (trainScore, math.sqrt(trainScore)))
 
 testScore = mean_squared_error(predictions, y_test)
-print('Test Score: %.8f MSE (%.8f RMSE)' % (testScore, math.sqrt(testScore)))
+print('Test l Score: %.8f MSE (%.8f RMSE)' % (testScore, math.sqrt(testScore)))
 
 
 
@@ -132,7 +132,8 @@ stocks_data = stocks.drop(['Item'], axis =1)
 
 display(stocks_data.head())
 
-
+import pdb
+pdb.set_trace()
 
 X_train, X_test,y_train, y_test = sd.train_test_split_lstm(stocks_data, 5)
 
